@@ -1,0 +1,24 @@
+form {
+    width: 250px;
+} 
+input {
+    margin-bottom: 5px;
+}
+.errorpage {
+    height: 100vh;
+    background-image: url('https://img.freepik.com/premium-vector/error-404-page-found-page-found-text-oops-looks-like-something-went-wrong_143407-2.jpg?w=2000');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.button {
+    height: 40px;
+}
+
+@media screen and (max-width: 425px) {
+    .errorpage {
+        height: 100vh;
+        background-image: url('https://img.freepik.com/premium-vector/error-404-page-found-page-found-text-oops-looks-like-something-went-wrong_143407-2.jpg?w=2000');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

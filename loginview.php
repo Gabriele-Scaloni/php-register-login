@@ -10,16 +10,16 @@ if (isset($_POST['Accedi'])) {
   $query->execute();
   $result = $query->fetch(PDO::FETCH_ASSOC);
   if ($result == null) {
-    header('Location: http://localhost/php-esercizio-citynet/errorpage.php');
+    header('Location: http://localhost/php-esercizio-login-register/errorpage.php');
   } else {
     if ($password == $result['password']) {
       $_SESSION['session_id'] = session_id();
       $_SESSION['azienda_id'] = $result['partitaiva'];
       var_dump($result['partitaiva']);
-      header('Location: http://localhost/php-esercizio-citynet/welcome.php');
+      header('Location: http://localhost/php-esercizio-login-register/welcome.php');
       exit;
     } else {
-      header('Location: http://localhost/php-esercizio-citynet/errorpage.php');
+      header('Location: http://localhost/php-esercizio-login-register/errorpage.php');
     }
   }
 }

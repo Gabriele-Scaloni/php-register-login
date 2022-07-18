@@ -10,7 +10,7 @@ if (isset($_SESSION['azienda_id'])) {
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
 } else {
-    header('Location: http://localhost/php-esercizio-citynet/loginview.php');
+    header('Location: http://localhost/php-esercizio-login-register/loginview.php');
 }
 
 $nome = $_POST['nome'];
@@ -38,9 +38,9 @@ $stmt->bindParam(':partitaiva', $partitaiva, PDO::PARAM_STR);
 
 try  {
     $stmt->execute();
-    header("Location: http://localhost/php-esercizio-citynet/welcome.php?updated=true");
+    header("Location: http://localhost/php-esercizio-login-register/welcome.php?updated=true");
     exit(); 
 } catch (Exception $e) {
-    header("Location: http://localhost/php-esercizio-citynet/errorpage.php");
+    header("Location: http://localhost/php-esercizio-login-register/errorpage.php");
     exit();
 }

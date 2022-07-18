@@ -10,7 +10,7 @@ if (isset($_SESSION['azienda_id'])) {
     $query->execute();
     $result = $query->fetch(PDO::FETCH_ASSOC);
 } else {
-    header('Location: http://localhost/php-esercizio-citynet/loginview.php');
+    header('Location: http://localhost/php-esercizio-login-register/loginview.php');
 }
 ?>
 
